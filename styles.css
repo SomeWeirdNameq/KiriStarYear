@@ -1,0 +1,309 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #252630;
+  /*overflow: hidden;*/
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  color:#67dbf5;
+}
+
+/* Starfield Canvas */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  font-size: 1.5rem;
+  z-index: 11;
+}
+
+/* Main Content */
+#main-content {
+  display: none;
+  position: relative;
+  z-index: 20;
+  padding: 0px 20px 0px 20px;/*20px;*/
+  height:100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:20%;
+}
+
+.vtuber-image {
+  /*width: 150px;*/
+  border-radius: 50%;
+  border: 2px solid white;
+  height:100%;
+}
+
+.social-links a {
+  /*margin: 0 10px;*/
+  margin: 5px 10px 0px 0px;
+  text-decoration: none;
+  color: white;
+  /*background: #333;*/
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #555;
+}
+#loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.iden {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+/* Individual Cell Styling */
+.cell {
+  flex: 1 1 calc(33.33% - 20px);
+  text-align: center;
+  background-color: #25263082;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(131, 199, 249);
+}
+
+/* Vtuber Image Styling */
+.cell-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  /*border-radius: 50%;
+  border: 3px solid #4CAF50;*/
+}
+
+/* Text Section Styling */
+.tits {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.tits h1 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.tits p {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+/* Div Containers within .tits */
+.tits div {
+  /*margin-bottom: 15px;*/
+  display: flex;
+}
+
+.tits div h1 {
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+  width: 150px; /* Keeps labels aligned */
+  color: white;
+}
+
+.tits div p {
+  display: inline-block;
+  font-size: 1em;
+  color: #c8c8c8;
+}
+
+
+
+.meddl {
+	width: 100%;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgb(131, 199, 249);
+
+}
+
+#model-image {
+  width:50%;/* Adjust as needed  width: 500px; */
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  width: 300px;
+  padding: 20px 0px 0px 0px;
+  height:90%
+}
+
+/* Vertical Timeline Line */
+.timeline {
+  position: relative;
+  width: 2px;
+  background-color: #67dbf5;
+  height: 100%;
+  /*margin: 0 auto;*/
+}
+
+/* Milestone */
+.milestone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+/* Milestone Dot */
+.dot {
+  position: absolute;
+  left: -6px; /* Center dot over the line */
+  width: 12px;
+  height: 12px;
+  background-color: #67dbf5;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Milestone Title */
+.title {
+  margin-left: 20px; /* Space between dot and title */
+  font-size: 1em;
+  color: #white;
+  align-items: center;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.title .date {
+  font-weight: bold;
+  color: #4CAF50; /* Highlight the date */
+}
+
+
+.curss{
+  color: #FFC805;
+  font-family: 'Lobster Two', cursive;
+  font-size: 1.75em;
+  line-height: 1.375;
+  font-weight: 700;
+}
+
+.touch{
+  color: #FFCFCF;
+  text-decoration: none;
+  gap: 0.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 0.125rem;
+  margin-right: -0.125rem;
+  font-size: 2.125em;
+  font-weight: 500;
+}
+
+.iframe{
+  margin-top:20px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+}
+iframe{
+  width: 40%;
+}
+
+
+.social-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;  /* Center the links horizontally */
+  }
+
+/* Responsive Styles for Mobile Devices SomeWeirdNameQ someweirdnameq */
+@media (max-width: 600px) {
+  .social-links {
+    display: grid;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;  
+  }
+  #model-image {
+    width: 100%;
+  }
+}
